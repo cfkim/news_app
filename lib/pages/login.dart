@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/pages/register.dart';
+import 'register.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -96,14 +96,35 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       borderRadius: BorderRadius.circular(30)
                     ),
-                    child: Center(
-                      child: Text('SIGN IN', style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600,
-                      )
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Center(
+                        child: Text('LOG IN', style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600,
+                        )
+                        ),
                       ),
                     )
+                  ),
+                  SizedBox(height: 40),
+                  Text('OR LOG IN BY'),
+                  SizedBox(height: 15),
+                  Container(
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.asset('assets/icons/google.png',
+                          width: 40,
+                          height: 40
+                        ),
+                        SizedBox(width: 16),
+                        Image.asset('assets/icons/facebook.png',
+                          width: 40,
+                          height: 40
+                        ),
+                    ],),
                   ),
                   SizedBox(height: 45),
                   RichText(
@@ -112,14 +133,13 @@ class _LoginPageState extends State<LoginPage> {
                         fontSize: 14
                       ),
                       children: <TextSpan>[
-                        TextSpan(text: 'Already have an account? ', style: TextStyle(
+                        TextSpan(text: 'New User? ', style: TextStyle(
                           color: Colors.black,
                         )),
                         TextSpan(
-                          text: 'Register here',
+                          text: 'REGISTER HERE',
                           style: TextStyle(
                             color: Color(0xFF5555c9),
-                            decoration: TextDecoration.underline,
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
