@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
+import 'login.dart';
+
 
 class BoardingPage extends StatelessWidget {
   const BoardingPage({super.key});
@@ -48,20 +50,27 @@ class BoardingPage extends StatelessWidget {
             ),
             SizedBox(height: 40),
             // Sign up
-            Container(
-              decoration: BoxDecoration(
-                color: Color(0xD0D0D0).withOpacity(0.3),
-                borderRadius: BorderRadius.circular(30), 
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 24, right: 24, top: 14, bottom: 14),
-                child: Text('Get Started', style: TextStyle(
-                  fontFamily: 'Poppins', 
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                  )
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Color(0xD0D0D0).withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(30), 
                 ),
-              )
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 24, right: 24, top: 14, bottom: 14),
+                  child: Text('Get Started', style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                    )
+                  ),
+                )
+              ),
             ),
           ],
           )
