@@ -37,6 +37,7 @@ class _NavPageState extends State<NavPage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       extendBody: true,
       body: _pages[_selectedIndex],
