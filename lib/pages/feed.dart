@@ -30,7 +30,6 @@ class _FeedPageState extends State<FeedPage> {
       backgroundColor: Color(0xFFF3F5F7),
       body: ListView.separated(
         itemCount: feed.length,
-        shrinkWrap: true,
         separatorBuilder: (context, index) => const SizedBox(height: 25),
         padding: const EdgeInsets.only(
           top: 15,
@@ -60,6 +59,7 @@ class _FeedPageState extends State<FeedPage> {
                   ),
                 ),
                 Container(
+                  height: 230,
                   width: double.infinity,
                   child: FittedBox(
                     fit: BoxFit.contain, // Adjusts the image size while maintaining its aspect ratio

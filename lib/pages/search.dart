@@ -62,9 +62,9 @@ class _SearchPageState extends State<SearchPage> {
       ])
     );
   }
-
+  
   Column _eventsSection(BuildContext context) {
-    final dateFormatter = DateFormat('yyyy-MM-dd');
+    final dateFormatter = DateFormat('MM/dd/yy');
     return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -136,7 +136,7 @@ class _SearchPageState extends State<SearchPage> {
                         ),
                       SizedBox(height: 10),
                       Padding(
-                        padding: const EdgeInsets.only(left: 8),
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
                         child: Row(
                           children: [
                             Text(
