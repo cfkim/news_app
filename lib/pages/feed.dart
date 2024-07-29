@@ -27,33 +27,68 @@ class _FeedPageState extends State<FeedPage> {
         preferredSize: Size.fromHeight(102),
         child: appBar(),
       ),
+      backgroundColor: Color(0xFFF3F5F7),
       body: ListView.separated(
         itemCount: feed.length,
         shrinkWrap: true,
         separatorBuilder: (context, index) => const SizedBox(height: 25),
         padding: const EdgeInsets.only(
+          top: 15,
           left: 20,
-          right: 20
+          right: 20,
+          bottom: 120,
         ),
         itemBuilder: (context, index) {
           return Container(
             width: 335,
-            height: 300,
+            height: 335,
             decoration: BoxDecoration(
               color: Colors.white,
+              borderRadius: BorderRadius.circular(10)
             ),
             child: Column(children: [
-                Row(children: [
-                    Text(feed[index].author),
-                    Spacer(),
-                    Text(feed[index].date)
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 12, right: 12, top: 11, bottom: 11),
+                  child: Row(
+                    children: [
+                      Image.asset('assets/images/pfp.png', width: 30, height: 30),
+                      SizedBox(width: 7),
+                      Text(feed[index].author),
+                      Spacer(),
+                      Text('1 hour ago', style: TextStyle(color: Color(0xffBDBDBD), fontSize: 13)),
+                    ],
+                  ),
                 ),
-                Image.asset('assets/images/feed_image.png'),
-                Row(children: [
-                    Text('${feed[index].comments}'),
-                    Text('${feed[index].likes}'),
-                  ],
+                Container(
+                  width: double.infinity,
+                  child: FittedBox(
+                    fit: BoxFit.contain, // Adjusts the image size while maintaining its aspect ratio
+                    child: Image.asset('assets/images/feed_image.png'),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: 13,
+                    left: 15, 
+                    right: 15,
+                    bottom: 13,
+                    ),
+                  child: Row(children: [
+                      Image.asset('assets/icons/save.png', height: 20, width: 20),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text('${feed[index].comments}', style: TextStyle(color: Color(0xff828282))),
+                      ),
+                      Image.asset('assets/icons/comment.png', height: 20, width: 20),
+                      SizedBox(width: 10),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text('${feed[index].likes}', style: TextStyle(color: Color(0xff828282))),
+                      ),
+                      Image.asset('assets/icons/heart.png', height: 20, width: 20),                 
+                    ],
+                  ),
                 ),
               ]
             )
@@ -89,7 +124,7 @@ class _FeedPageState extends State<FeedPage> {
                                 contentPadding: const EdgeInsets.only(top: 10, bottom: 10),
                                 prefixIcon: Padding(
                                   padding: const EdgeInsets.all(12.0),
-                                  child: Image.asset('assets/icons/glass.png',
+                                  child: Image.asset('assets/icons/search-color.png',
                                       height: 20, width: 20),
                                 ),
                                 border: OutlineInputBorder(
