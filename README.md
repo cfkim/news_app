@@ -8,20 +8,20 @@ This project is a starting point for a Flutter application.
 
 If you haven't already set up Flutter on your device:
 
-- [Set-up: Install]([https://docs.flutter.dev/get-started/codelab](https://docs.flutter.dev/get-started/install))
+- [Flutter Installation Guide](https://docs.flutter.dev/get-started/install)
 
 This app runs on IOS and Android. You can run this code on Android Studio, XCode, or VSCode. I recommend VSCode, as you can choose between running the devices with (> Flutter: Select Device) from one editor. At the moment the application hasn't been deployed, so it has to be run locally from your machine. Follow these steps to do this:
 
-1. Clone this repo and open it in the editor. 
-2. Select the device to run your simulation on (> Flutter: Select Device).
+1. Clone this repo and open it in the editor
+2. Select the device to run your simulation on (> Flutter: Select Device)
 3. Go to Run > Start Debugging
-4. Whichever device you chose will open and start building the project.
+4. Whichever device you chose will open and start building the project
 
 ## Features
 
 - User-friendly UI
 
-  To-be implemented:
+  **To-be implemented:**
 - Likes and Comments on posts
 - Posting events, polls, and community posts
 - Trending, Popular, and Following views for the main feed
