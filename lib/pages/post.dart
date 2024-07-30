@@ -204,7 +204,7 @@ class _CreatePostPageState extends State<CreatePostPage> {
                     ),
                     maxLines: 4,
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 14),
                   Visibility(
                     visible: _selectedPostType == 'Event',
                     child: TextField(

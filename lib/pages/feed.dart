@@ -126,7 +126,7 @@ class _FeedPageState extends State<FeedPage> {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 60),
+                padding: const EdgeInsets.only(top: 30),
                 child: Column(
                   children: [
                     Row(
@@ -204,7 +204,8 @@ class _FeedPageState extends State<FeedPage> {
                           )
                         );
                       }).toList()
-                      )
+                      ),
+
                   ],
                 ),
               ),

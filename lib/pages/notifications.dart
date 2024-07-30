@@ -11,7 +11,7 @@ class NotificationsPage extends StatefulWidget {
 }
 
 class _NotificationsPageState extends State<NotificationsPage> {
-  int notification_count = 3;
+  int notification_count = 4;
   List<NotificationModel> notifications = [];
   final dateFormatter = DateFormat('MM/dd/yy');
 
