@@ -1,3 +1,5 @@
+![Local Link Header](https://github.com/user-attachments/assets/e5752a60-fd48-487f-898a-83663665639a)
+
 # LocalLink
 
 A cross-platform app built with Flutter to bring communities closer together and end small-town boredom. Approximately **45 million** people in the U.S. alone live in non-major metropolitan areas. Typically, smaller towns offer less attractions than that of their larger counterparts. But having grown up in a small town myself, I've found that there's always something to do with a little searching and asking around! This app facilitates that hunt for fun while also letting you engage with other members of a community within one app. 
