@@ -30,11 +30,11 @@ This app runs on IOS and Android. You can run this code on Android Studio, XCode
 - Notification view to see latest updates and notification settings
 
 ## Maintainers and Contributors
-# Project Maintainers
+### Project Maintainers
 [Christine Kim](https://github.com/cfkim) - [Project Creator]
 Started this project and added the necessary UI.
 
-# Contributors
+### Contributors
 [Your name could be here!]
 
 ## Support
