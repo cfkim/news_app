@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/pages/postDetail.dart';
 import '../models/feed_model.dart';
 
 class FeedPage extends StatefulWidget {
@@ -38,60 +39,77 @@ class _FeedPageState extends State<FeedPage> {
           bottom: 120,
         ),
         itemBuilder: (context, index) {
-          return Container(
-            width: 335,
-            height: 335,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10)
-            ),
-            child: Column(children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, right: 12, top: 11, bottom: 11),
-                  child: Row(
-                    children: [
-                      Image.asset('assets/images/pfp.png', width: 30, height: 30),
-                      SizedBox(width: 7),
-                      Text(feed[index].author),
-                      Spacer(),
-                      Text('1 hour ago', style: TextStyle(color: Color(0xffBDBDBD), fontSize: 13)),
-                    ],
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PostDetailPage(
+                    title: 'Going to the Beach',
+                    description: 'today i went to the beach and it was nice.',
+                    imageUrl: feed[index].image, // or null if no image
+                    author: feed[index].author,
+                    timestamp: feed[index].date,
+                    likes: 3
                   ),
                 ),
-                Container(
-                  height: 230,
-                  width: double.infinity,
-                  child: FittedBox(
-                    fit: BoxFit.contain, // Adjusts the image size while maintaining its aspect ratio
-                    child: Image.asset('assets/images/feed_image.png'),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 13,
-                    left: 15, 
-                    right: 15,
-                    bottom: 13,
+              );
+            },
+            child: Container(
+              width: 335,
+              height: 335,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10)
+              ),
+              child: Column(children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12, right: 12, top: 11, bottom: 11),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/images/pfp.png', width: 30, height: 30),
+                        SizedBox(width: 7),
+                        Text(feed[index].author),
+                        Spacer(),
+                        Text('1 hour ago', style: TextStyle(color: Color(0xffBDBDBD), fontSize: 13)),
+                      ],
                     ),
-                  child: Row(children: [
-                      Image.asset('assets/icons/save.png', height: 20, width: 20),
-                      Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Text('${feed[index].comments}', style: TextStyle(color: Color(0xff828282))),
-                      ),
-                      Image.asset('assets/icons/comment.png', height: 20, width: 20),
-                      SizedBox(width: 10),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Text('${feed[index].likes}', style: TextStyle(color: Color(0xff828282))),
-                      ),
-                      Image.asset('assets/icons/heart.png', height: 20, width: 20),                 
-                    ],
                   ),
-                ),
-              ]
-            )
+                  Container(
+                    height: 230,
+                    width: double.infinity,
+                    child: FittedBox(
+                      fit: BoxFit.contain, // Adjusts the image size while maintaining its aspect ratio
+                      child: Image.asset('assets/images/feed_image.png'),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 13,
+                      left: 15, 
+                      right: 15,
+                      bottom: 13,
+                      ),
+                    child: Row(children: [
+                        Image.asset('assets/icons/save.png', height: 20, width: 20),
+                        Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Text('${feed[index].comments}', style: TextStyle(color: Color(0xff828282))),
+                        ),
+                        Image.asset('assets/icons/comment.png', height: 20, width: 20),
+                        SizedBox(width: 10),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Text('${feed[index].likes}', style: TextStyle(color: Color(0xff828282))),
+                        ),
+                        Image.asset('assets/icons/heart.png', height: 20, width: 20),                 
+                      ],
+                    ),
+                  ),
+                ]
+              )
+            ),
           );
         },
       ),

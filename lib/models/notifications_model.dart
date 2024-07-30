@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
 class NotificationModel {
-  final String person;
-  final DateTime date;
-  final String action; // "liked", "commented", or "posted"
-  final String imagePath; // Path to the image related to the notification
+  String person;
+  String pfp;
+  DateTime date;
+  String action; // "liked", "commented", or "posted"
+  String postName;
+  String imagePath; // Path to the image related to the notification
   bool isRead;
 
   NotificationModel({
     required this.person,
+    required this.pfp,
     required this.date,
     required this.action,
+    required this.postName,
     required this.imagePath,
     required this.isRead,
   });
@@ -20,30 +24,38 @@ class NotificationModel {
     return [
       NotificationModel(
         person: 'Alice',
+        pfp: 'assets/images/pfp.png',
         date: DateTime.now().subtract(Duration(minutes: 5)),
         action: 'liked',
-        imagePath: 'assets/images/post1.png',
+        postName: 'Autumn in my heart',
+        imagePath: 'assets/images/feed_image.png',
         isRead: true,
       ),
       NotificationModel(
-        person: 'Bob',
+        person: 'Alice',
+        pfp: 'assets/images/pfp.png',
         date: DateTime.now().subtract(Duration(hours: 1)),
         action: 'commented',
-        imagePath: 'assets/images/post2.png',
+        postName: 'Autumn in my heart',
+        imagePath: 'assets/images/feed_image.png',
         isRead: false,
       ),
       NotificationModel(
         person: 'Charlie',
+        pfp: 'assets/images/pfp2.png',
         date: DateTime.now().subtract(Duration(days: 1)),
         action: 'posted',
-        imagePath: 'assets/images/post3.png',
+        postName: 'Autumn in my heart',
+        imagePath: 'assets/images/feed_image.png',
         isRead: true,
       ),
       NotificationModel(
         person: 'David',
         date: DateTime.now().subtract(Duration(days: 2)),
+        pfp: 'assets/images/pfp1.png',
         action: 'liked',
-        imagePath: 'assets/images/post4.png',
+        postName: 'Autumn in my heart',
+        imagePath: 'assets/images/feed_image.png',
         isRead: false,
       ),
     ];

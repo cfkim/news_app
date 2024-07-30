@@ -1,6 +1,6 @@
 class FeedModel {
   String author;
-  String date;
+  DateTime date;
   int likes;
   int comments;
   String image;
@@ -19,7 +19,7 @@ class FeedModel {
     feed.add(
       FeedModel(
        author: 'Andrew Smith',
-       date: 'February 20, 2024',
+       date: DateTime(2024, 8, 15),
        likes: 2,
        comments: 2,
        image: 'assets/images/feed_image.png',
@@ -29,7 +29,7 @@ class FeedModel {
     feed.add(
       FeedModel(
        author: 'Andrew Smith',
-       date: 'February 20, 2024',
+       date: DateTime(2024, 2, 15),
        likes: 2,
        comments: 2,
        image: 'assets/images/feed_image.png',
@@ -39,7 +39,7 @@ class FeedModel {
     feed.add(
       FeedModel(
        author: 'Andrew Smith',
-       date: 'February 20, 2024',
+       date: DateTime(2024, 5, 15),
        likes: 2,
        comments: 2,
        image: 'assets/images/feed_image.png',
@@ -49,7 +49,7 @@ class FeedModel {
     feed.add(
       FeedModel(
        author: 'Andrew Smith',
-       date: 'February 20, 2024',
+       date: DateTime(2024, 7, 15),
        likes: 2,
        comments: 2,
        image: 'assets/images/feed_image.png',

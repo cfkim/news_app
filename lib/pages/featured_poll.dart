@@ -39,7 +39,7 @@ class _FeaturedPollState extends State<FeaturedPoll> {
                     left: 8, right: 8, top: 10,
                   ),
                   child: Text(
-                    'What is the best Starbucks Drink?', style: TextStyle(fontWeight: FontWeight.w600),
+                    'What is the best drink at Alfee Cafe?', style: TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ),
                 const SizedBox(height: 12),
